@@ -5,6 +5,8 @@
     background-color: #333;
     color: white;
     padding: 10px 20px;
+    position: relative; /* Allows z-index to work */
+    z-index: 10; /* Ensures navbar is above other elements */
 }
 
 .newlinks {
@@ -25,6 +27,9 @@
 .newlinks ul li a {
     text-decoration: none;
     color: white;
+    display: inline-block; /* Ensures clickable area */
+    pointer-events: auto; /* Ensures links are clickable */
+    padding: 5px 10px; /* Increases clickable area */
 }
 
 .newlinks ul li button {
