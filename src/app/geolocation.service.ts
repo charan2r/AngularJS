@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GeolocationService {
-  private apiKey = "AIzaSyBeiPBMHkKppcfG0gUfHBa9_Df_ykTGbNw"
-  private apiUrl = `https://www.googleapis.com/geolocation/v1/geolocate?key=${this.apiKey}`;
+  private apiUrl = `https://www.googleapis.com/geolocation/v1/geolocate?key=${environment.geolocationApiKey}`;
 
   constructor(private http:HttpClient) { }
 
